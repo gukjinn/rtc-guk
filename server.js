@@ -4,8 +4,8 @@ var	config = require('./config.json');
 var	bodyParser = require('body-parser');
 var fs = require('fs');
 var options = {  
-    key: fs.readFileSync('./keys/private.pem'),
-    cert: fs.readFileSync('./keys/public.pem')
+    key: fs.readFileSync('./go/private.pem'),
+    cert: fs.readFileSync('./go/public.pem')
 };
 // for socket server
 var	http = require('https').Server(options,app);
