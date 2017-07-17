@@ -1,0 +1,24 @@
+{
+  "name": "webrtc-lab",
+  "description": "Webrtc simple examples",
+  "version": "0.8.1",
+  "author": "dodortus",
+  "license": "MIT",
+  "keywords": [
+    "webrtc",
+    "javascript"
+  ],
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.6"
+  },
+  "engine": {
+    "node": "0.12.x"
+	"bower": "~1.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

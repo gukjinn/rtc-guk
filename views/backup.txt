@@ -1,0 +1,27 @@
+v class="row">
+  <div id="share-wrap"> <a href="#" id="unique-token"> Share this Room Link</a></div>
+  </div>
+  <div class="row">
+   <div class="col-md-9">
+    <div class="row">
+     <div id="join-wrap" class="col-md-9"></div>
+     <div id="room-list"></div>
+    </div>
+    <div class="row">
+     <div id="video-wrap" class="col-md-6"></div>
+    </div>
+   </div>
+   <div class="col-md-3">
+      <div id ="chatt" style="overflow-y:scroll; overflow-x:hidden"  class="chat-box">
+       <ul id ="chatArea"></ul>
+      </div>
+     <div class = "row text-center">
+      <div class = "col-md-12">
+       <input id = "msgInput" type = "text" placeholder = "message" />
+       <button id = "sendMsgBtn" >Send</button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ppend('<div id= "'userList[arr[count++]]+'"> <video id="remote-video" autoplay="true" src="' + URL.createObjectURL(event.stream) + '"></video></div>');
