@@ -1,6 +1,6 @@
 {
   "webserver": {
-    "host": "gukjingg.herokuapp.com",
+    "host": "localhost",
     "port": 8080
   }
 }
