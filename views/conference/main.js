@@ -455,7 +455,7 @@ $(function() {
    * initialize
    */
   function initialize() {
-	  console.log("헤쉬길이",location.hash.length);
+	  console.log("핸쉬길이",location.hash.length);
 	 if(location.hash.length > 2){
 		 var tt = '';		 
 		 setRoomToken();
