@@ -113,6 +113,7 @@ $(function() {
 		//
       if (isOffer) {
 			//조인하면 합류하면 Offer 제안을 만든다.
+			console.log("isOffer 요쪽이 여기가 문제인가??");
 			var arr = Object.keys(userList);
 
 			//var result = null;
