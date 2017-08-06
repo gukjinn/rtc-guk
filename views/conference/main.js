@@ -479,7 +479,8 @@ $(function() {
 			
 			userId = tt2;
 			socket.emit('joinRoom', roomId, userId);
-			getUserMedia();
+			if(userList)
+				getUserMedia();
     });
 
     $('#btn-camera').click(function() {
