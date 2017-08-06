@@ -409,8 +409,7 @@ $(function() {
 	 
 	  userId = tt;
 	  socket.emit('joinRoom', roomId, userId);
-	  if(userList)
-		  getUserMedia();
+	  getUserMedia();
       $(this).attr('disabled', true);
     });
 
