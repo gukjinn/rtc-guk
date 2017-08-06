@@ -8,7 +8,7 @@ var options = {
     cert: fs.readFileSync('./go/public.pem')
 };
 // for socket server
-var	http = require('https').Server(options,app);
+var	http = require('https').Server(app);
 var	io = require('socket.io')(http);
 var port = process.env.PORT || config.webserver.port;
 
