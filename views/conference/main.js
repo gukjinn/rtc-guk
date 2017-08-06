@@ -36,7 +36,7 @@ $(function() {
   var localStream = null;
  // var peer ; 
   var peerConnections ={};  // offer or answer peer
-  var userList = {};
+  var userList = null;
   var dataChannel = {};
   var count = 0;
   var count2 = 98;
@@ -529,6 +529,7 @@ $(function() {
  // socket.emit('joinRoom', roomId, userId);
   socket.on('joinRoom', function(roomId, thisRoom) {
     console.log('joinRoom', arguments);
+	userList = {};
 	userList = thisRoom;
 		console.log("뭔지알아야",roomId);
 	
