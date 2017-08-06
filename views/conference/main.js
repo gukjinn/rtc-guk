@@ -485,6 +485,7 @@ $(function() {
 			userId = tt2;
 			socket.emit('joinRoom', roomId, userId);
 			getUserMedia();
+			roomCallStart();
     });
 
     $('#btn-camera').click(function() {
@@ -539,7 +540,7 @@ $(function() {
 	
 	console.log("우리의 룸",thisRoom);
 	console.log("유저 리스트 뽑는다.", userList);
-	roomCallStart();
+
    // if (Object.size(thisRoom) > 1) {
 	//	console.log("werwerwerwer");
    //   onFoundUser(); //userList 1보다 크면 
