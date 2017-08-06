@@ -397,7 +397,7 @@ $(function() {
     var $btnJoin = $('#join');
     $btnJoin.click(function() {
       isOffer = true;
-	  
+	  console.log("시발여기가 문제인가???????");
 	  var tt = $('#userInput2').val();
 	  if(!tt){
 		alert('이름을 입력해주세요.');
