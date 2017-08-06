@@ -481,7 +481,6 @@ $(function() {
 			
 			userId = tt2;
 			socket.emit('joinRoom', roomId, userId);
-			if(userList)
 			getUserMedia();
     });
 
