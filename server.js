@@ -3,12 +3,12 @@ var	app = express();
 var	config = require('./config.json');
 var	bodyParser = require('body-parser');
 var fs = require('fs');
-var options = {  
+/*var options = {  
     key: fs.readFileSync('./go/private.pem'),
     cert: fs.readFileSync('./go/public.pem')
-};
+};*/
 // for socket server
-var	http = require('https').Server(options,app);
+var	http = require('http').Server(app);
 var	io = require('socket.io')(http);
 var port = process.env.PORT || config.webserver.port;
 
