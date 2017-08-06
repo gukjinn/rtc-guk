@@ -115,7 +115,7 @@ $(function() {
 			//조인하면 합류하면 Offer 제안을 만든다.
 			console.log("isOffer 요쪽이 여기가 문제인가??");
 			var arr = Object.keys(userList);
-
+			console.log("우리의 유저리스트",userList);
 			//var result = null;
 			for ( var i = 0; i < arr.length; i++ ){
 					console.log("우리아이디",userList[arr[i]]);
