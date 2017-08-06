@@ -396,6 +396,7 @@ $(function() {
     $roomList.html([
       '<div class="room-info"style="margin:auto" ><p>당신을 기다리고 있어요</p><input type = "text" id = "userInput2" class ="form-control" placeholder ="User Name" style="width:20%"required="" autofocus = ""><span class="input-group-bgn"><button class="btn btn-default type="button" id="join">Join</button></span></div>'].join('\n'));
     var $btnJoin = $('#join');
+	
     $btnJoin.click(function() {
       isOffer = true;
 	  console.log("시발여기가 문제인가???????");
@@ -408,7 +409,8 @@ $(function() {
 	 
 	  userId = tt;
 	  socket.emit('joinRoom', roomId, userId);
-      getUserMedia();
+	  if(userList)
+		  getUserMedia();
       $(this).attr('disabled', true);
     });
 
@@ -479,8 +481,7 @@ $(function() {
 			
 			userId = tt2;
 			socket.emit('joinRoom', roomId, userId);
-			if(userList)
-				getUserMedia();
+			getUserMedia();
     });
 
     $('#btn-camera').click(function() {
