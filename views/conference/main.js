@@ -531,8 +531,9 @@ $(function() {
 	userList = thisRoom;
 		console.log("뭔지알아야",roomId);
 	
-	
 	console.log("우리의 룸",thisRoom);
+	console.log("유저 리스트 뽑는다.", userList);
+	
    // if (Object.size(thisRoom) > 1) {
 	//	console.log("werwerwerwer");
    //   onFoundUser(); //userList 1보다 크면 
