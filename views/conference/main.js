@@ -111,26 +111,7 @@ $(function() {
       $tokenWrap.slideDown(1000);
 	  //로컬 비디오 설정....
 		//
-      if (isOffer) {
-			//조인하면 합류하면 Offer 제안을 만든다.
-			console.log("isOffer 요쪽이 여기가 문제인가??");
-			var arr = Object.keys(userList);
-			console.log("우리의 유저리스트",userList);
-			//var result = null;
-			for ( var i = 0; i < arr.length; i++ ){
-					console.log("우리아이디",userList[arr[i]]);
-				createPeerConnection(userList[arr[i]]);
-				 createOffer(userList[arr[i]]);
-				 
-			}
-			//for each ( var item in 
-           // for each( var item in arr){
-			//	console.log("알아줘" , arr);
-			//}
-		 
-        
-		
-      }
+      
     }, function() {
       console.error('Error getUserMedia');
     });
@@ -166,12 +147,34 @@ $(function() {
       });
     }, onSdpError, mediaConstraints);
   }
-
+  
   /**
   * createAnswer
   * offer에 대한 응답 SDP를 생성 한다.
   * @param {object} msg offer가 보내온 signaling
   */
+  function roomCallStart(){
+	if (isOffer) {
+			//조인하면 합류하면 Offer 제안을 만든다.
+			console.log("isOffer 요쪽이 여기가 문제인가??");
+			var arr = Object.keys(userList);
+			console.log("우리의 유저리스트",userList);
+			//var result = null;
+			for ( var i = 0; i < arr.length; i++ ){
+					console.log("우리아이디",userList[arr[i]]);
+				createPeerConnection(userList[arr[i]]);
+				 createOffer(userList[arr[i]]);
+				 
+			}
+			//for each ( var item in 
+           // for each( var item in arr){
+			//	console.log("알아줘" , arr);
+			//}
+		 
+        
+		
+      }
+  }	  
   function createAnswer(msg) {
     console.log('createAnswer', arguments);
 	if(peerConnections[msg.sender]){
@@ -536,7 +539,7 @@ $(function() {
 	
 	console.log("우리의 룸",thisRoom);
 	console.log("유저 리스트 뽑는다.", userList);
-	
+	roomCallStart();
    // if (Object.size(thisRoom) > 1) {
 	//	console.log("werwerwerwer");
    //   onFoundUser(); //userList 1보다 크면 
