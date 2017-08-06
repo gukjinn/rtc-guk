@@ -140,6 +140,7 @@ $(function() {
   * createOffer
   * offer SDP를 생성 한다.
   */
+  function createUser
   function createOffer(id) {
     console.log('createOffer', arguments);
 	//
@@ -480,6 +481,7 @@ $(function() {
 			
 			userId = tt2;
 			socket.emit('joinRoom', roomId, userId);
+			if(userList)
 			getUserMedia();
     });
 
